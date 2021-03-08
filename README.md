@@ -22,6 +22,10 @@ import math
 def sigmoid(x):
     return 1 / (1 + math.exp(-x))
     
+height = heatmaps[0].shape[0]
+width = heatmaps[0][0].shape[0]
+numKeypoints = heatmaps[0][0][0].shape[0]
+
 keypointPositions = []
 
 for keypoint in range(numKeypoints):
